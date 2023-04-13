@@ -17,6 +17,6 @@ class Decoder(nn.Module):
         # 2nd sublayer input: K, V from encoder, Q from 1st sublayer
 
         for layer in self.decoder:
-            x = layer(x)
+            x = layer(x, context)
 
         return x

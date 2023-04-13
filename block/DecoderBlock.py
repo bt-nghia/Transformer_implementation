@@ -2,7 +2,7 @@ from torch import nn
 
 
 class DecoderBlock(nn.Module):
-    def __init__(self, d_model, n_head, fc_hidden, kdim, vdim):
+    def __init__(self, d_model, n_head, fc_hidden, kdim=64, vdim=64):
         super(DecoderBlock, self).__init__()
         # masked attention
         self.masked_multi_head_attention = nn.MultiheadAttention(embed_dim=d_model,
